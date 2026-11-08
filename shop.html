@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Collection | EMU Furniture Hawassa</title>
+  <meta name="description" content="Sofas, beds, dining sets, and custom kitchens from the EMU Furniture showroom in Atote, Hawassa. Guide prices in ETB.">
+  <meta name="theme-color" content="#4e2618">
+  <link rel="icon" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Noto+Sans+Ethiopic:wght@500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>if(sessionStorage.getItem("emu-in"))document.documentElement.classList.add("seen");</script>
+</head>
+<body data-page="shop">
+  <a class="skip" href="#main">Skip to content</a>
+  <div id="progress"></div>
+  <header class="site-header">
+    <a class="brand" href="index.html"><img src="images/logo.png" alt="EMU Furniture"></a>
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Collection</a>
+      <a href="reels.html">Reels</a>
+      <a href="custom.html">Custom</a>
+      <a href="showroom.html">Showroom</a>
+      <a href="about.html">Our story</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a class="saved-link" href="shop.html?fav=1">Saved <span data-fav-count>0</span></a>
+      <a class="call-link" href="tel:+251993449447"><span>+251 99 344 9447</span></a>
+      <a class="btn btn-gold btn-sm" href="https://wa.me/251993449447?text=Hello%20EMU%20Furniture%2C%20I%20am%20looking%20through%20the%20collection." target="_blank" rel="noopener">WhatsApp</a>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span></button>
+    </div>
+  </header>
+  <main id="main">
+    <div class="wrap page-hero">
+      <p class="eyebrow">The collection</p>
+      <h1>Handcrafted for the rooms of Hawassa.</h1>
+      <p class="lede">Nine pieces taken from the showroom films: the white lounge, the glossy dining run, the cream and gold bed, and the kitchen with the gold frame. Prices are showroom guides. Reserve on WhatsApp and the workshop confirms cloth, size, and the day it can leave.</p>
+    </div>
+    <div class="wrap shop-layout">
+      <details class="filters" open>
+        <summary>Filter</summary>
+        <label class="filter-label" for="shop-search">Search</label>
+        <input class="search" id="shop-search" type="search" placeholder="Name or code, such as LR-SOFA">
+        <p class="filter-label">Room</p>
+        <div class="filter-list">
+          <button class="chip on" type="button" data-cat="all">All pieces</button>
+          <button class="chip" type="button" data-cat="living">Living room</button>
+          <button class="chip" type="button" data-cat="bedroom">Bedroom</button>
+          <button class="chip" type="button" data-cat="dining">Dining</button>
+          <button class="chip" type="button" data-cat="custom">Custom</button>
+        </div>
+        <label class="filter-label" for="shop-zone">Delivery zone</label>
+        <select class="select" id="shop-zone">
+          <option value="all">All areas</option>
+          <option>Hawassa</option>
+          <option>Atote</option>
+          <option>Piassa</option>
+          <option>Mobil</option>
+          <option>Menaharya</option>
+          <option>Adis Ketema</option>
+          <option>Hayik Dar</option>
+        </select>
+        <p class="filter-label">Show</p>
+        <label class="check"><input type="checkbox" data-flag="stock"> In stock</label>
+        <label class="check"><input type="checkbox" data-flag="popular"> Popular</label>
+        <label class="check"><input type="checkbox" data-flag="custom"> Custom orders</label>
+        <button class="text-btn" type="button" data-fav-filter>Saved on this phone</button>
+        <button class="text-link" id="clear-filters" type="button" style="margin-top:14px; background:none; border:0; border-bottom:1px solid var(--gold);">Clear filters</button>
+      </details>
+      <div>
+        <div class="toolbar">
+          <p id="result-count">Pieces</p>
+          <label>
+            <span class="fine">Sort</span>
+            <select class="select" id="shop-sort" style="min-width:180px">
+              <option value="featured">Featured</option>
+              <option value="price-asc">Price, low to high</option>
+              <option value="price-desc">Price, high to low</option>
+              <option value="name">Name</option>
+            </select>
+          </label>
+        </div>
+        <div class="grid" id="catalog"></div>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap foot-grid">
+      <div>
+        <a class="brand" href="index.html"><img src="images/logo.png" alt="EMU Furniture"></a>
+        <p class="fine" style="margin-top:8px">Atote, Hawassa. Sofas, beds, tables, and pieces made to the room.</p>
+      </div>
+      <div>
+        <h3>Visit</h3>
+        <ul>
+          <li><a href="shop.html">Collection</a></li>
+          <li><a href="reels.html">Reels</a></li>
+          <li><a href="custom.html">Custom orders</a></li>
+          <li><a href="showroom.html">Showroom</a></li>
+          <li><a href="about.html">Our story</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Help</h3>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html#faq">Questions</a></li>
+          <li><a href="custom.html#warranty">Warranty</a></li>
+          <li><a href="showroom.html#hours">Hours</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Talk to us</h3>
+        <ul>
+          <li><a href="tel:+251993449447">+251 99 344 9447</a></li>
+          <li><a href="mailto:emufurniture1@gmail.com">emufurniture1@gmail.com</a></li>
+          <li><a href="https://www.instagram.com/emu.furniture" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.tiktok.com/@emufurniture0" target="_blank" rel="noopener">TikTok</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap legal"><span>© <span id="year">2026</span> EMU Furniture. Hawassa, Sidama, Ethiopia.</span></div>
+  </footer>
+  <a class="wa-float" href="https://wa.me/251993449447?text=Hello%20EMU%20Furniture%2C%20I%20am%20looking%20through%20the%20collection." target="_blank" rel="noopener">WhatsApp</a>
+  <noscript><p class="wrap">Turn on JavaScript to browse the collection. You can also call +251 99 344 9447.</p></noscript>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
