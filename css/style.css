@@ -734,6 +734,7 @@ textarea.field { min-height: 120px; resize: vertical; }
   background: var(--paper);
   border: 1px solid var(--line);
   padding: 22px;
+  border-radius: 18px;
 }
 
 .panel h2, .panel h3 { font-size: 2rem; margin-bottom: 8px; }
@@ -749,8 +750,9 @@ label span { display: block; font-size: 13px; font-weight: 650; margin-bottom: 6
 .choice {
   background: var(--paper);
   border: 1px solid var(--line);
-  padding: 16px;
-  min-height: 120px;
+  padding: 18px 18px 20px;
+  min-height: 140px;
+  border-radius: 16px;
 }
 
 .choice h3 { font-size: 1.3rem; margin-bottom: 6px; }
@@ -786,11 +788,18 @@ label span { display: block; font-size: 13px; font-weight: 650; margin-bottom: 6
 .info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 
 .map {
-  min-height: 320px;
+  min-height: 380px;
   border: 0;
   width: 100%;
   background: var(--sand);
   filter: saturate(0.85);
+  display: block;
+}
+
+.map-frame {
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid var(--line);
 }
 
 .faq-item { border-top: 1px solid var(--line); }
@@ -1144,6 +1153,143 @@ html.seen #loader { display: none; }
   .founder-inner, .visit-panel { padding: 36px 0; }
   .visit-panel { padding: 28px 20px; }
   .founder .text-link { white-space: normal; }
+}
+
+.page-stage { padding: 12px 0 8px; }
+
+.page-stage-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 1.05fr) 0.95fr;
+  gap: 36px;
+  align-items: center;
+}
+
+.page-stage h1 {
+  font-size: clamp(3.1rem, 5.6vw, 5.5rem);
+  max-width: 11ch;
+  margin: 8px 0 14px;
+}
+
+.stage-mosaic {
+  display: grid;
+  grid-template-columns: 1.25fr 0.85fr;
+  grid-template-rows: 210px 210px;
+  gap: 10px;
+}
+
+.stage-mosaic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.stage-mosaic img:first-child { grid-row: 1 / span 2; }
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.work-card {
+  position: relative;
+  display: block;
+  min-height: 380px;
+  border-radius: 18px;
+  overflow: hidden;
+  color: #fbf8f3;
+  background: var(--espresso);
+}
+
+.work-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.work-card:hover img { transform: scale(1.04); }
+
+.work-card div {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 1;
+}
+
+.work-card h3 { font-family: var(--serif); font-size: 1.85rem; font-weight: 560; }
+
+.work-card p { color: rgba(251, 248, 243, 0.84); font-size: 0.95rem; margin-top: 4px; }
+
+.work-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50%;
+  background: linear-gradient(transparent, rgba(22, 10, 6, 0.75));
+}
+
+.reach {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.reach-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  min-height: 148px;
+  padding: 20px 20px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.reach-card span {
+  color: var(--gold-deep);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.reach-card strong {
+  font-family: var(--serif);
+  font-size: clamp(1.15rem, 1.45vw, 1.4rem);
+  font-weight: 560;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  overflow-wrap: break-word;
+}
+
+.mile-year {
+  display: block;
+  color: var(--gold-deep);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+@media (max-width: 980px) {
+  .page-stage-grid, .work-grid { grid-template-columns: 1fr 1fr; }
+  .stage-mosaic { min-height: 0; }
+  .work-card { min-height: 300px; }
+}
+
+@media (max-width: 680px) {
+  .page-stage-grid, .work-grid, .reach { grid-template-columns: 1fr; }
+  .stage-mosaic { grid-template-columns: 1fr 1fr; grid-template-rows: 240px 140px; }
+  .page-stage h1 { font-size: 3rem; }
 }
 
 .hero-film {
